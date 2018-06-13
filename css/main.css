@@ -26,13 +26,29 @@ a {
 	display: flex;
 	flex-direction: row;
 	flex-flow: row;
-	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
 	align-content: center;
 	background: #1c2a39;
 	padding: 17.5px;
 	z-index: 10;
 	width: 100vw;
-	margin-left: -2%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.header i {
+	color: white;
+	cursor: pointer;
+	opacity: 0.7;
+	transition: 0.2s;
+	font-size: 25px;
+	margin: 10px;
+}
+
+.header i:hover {
+	opacity: 1.0;
 }
 
 .footer {
@@ -63,6 +79,26 @@ a {
 .logo:hover {
 	background-color: #1c2a39;
 	color: white;
+}
+
+#menu {
+	width: 350px;
+	height: 0;
+	position: fixed;
+	padding: 10px;
+	background-color: rgba(92, 106, 121, 0.95);
+	border-radius: 5px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	flex-flow: column;
+	align-content: flex-start;
+	margin: 10px;
+	font-size: 20px;
+	z-index: 11;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.2s;
 }
 
 .container {

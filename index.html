@@ -5,6 +5,7 @@
 		<title>🌌 Nowlow's video player</title>
 		<link rel="stylesheet" href="css/videoplayer.css"/>
 		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/fontawesome/fontawesome-all.css"/>
 		<meta property="og:title" content="Nowlow's video player - Tests" />
 		<meta property="og:type" content="video" />
 		<meta property="og:url" content="https://nowlow.github.io/" />
@@ -13,10 +14,18 @@
 	
 	<body>
 		<div class="header trueone">
+			<i id="menudisplayer" class="fas fa-bars"></i>
 			<span class="logo">🌌 Maitre Nowlow's Player</span>
+			<span>
+				<a href="https://github.com/nowlow/nowlow.github.io"><i class="fab fa-github"></i></a>
+				<i class="fas fa-user-alt"></i>
+			</span>
 		</div>
 		<div class="header">
 			<span class="logo">🌌 Maitre Nowlow's Player</span>
+		</div>
+		<div id="menu" style="visibility: hidden;">
+			<div class="element">Ici non plus y a rien hein cherche pas</div>
 		</div>
 			<div class="video">
 				<span id="startplaying"><v dun="play"></v></span>
@@ -64,8 +73,8 @@
 		</div>
 			<div class="separation"></div>
 		<div class="footer">Aucun droit réservé. 2018 Maitre Nowlow<br/>
-		🚀 Powered by Naoufel Berrada and no one else.<br/>
-		J'aime utiliser des emojis sur mes sites ⚔️</div>
+		<i class="fas fa-space-shuttle"></i> Powered by Naoufel Berrada.<br/>
+		La police utilisée par le lecteur est entièrement faite par moi mais j'utilise FontAwesome pour le flat faut pas déconner <i class="fab fa-font-awesome"></i></div>
 		<script src="js/vfont.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/videoplayer.js"></script>
