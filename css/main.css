@@ -90,6 +90,12 @@ a.night {
 	color: white;
 }
 
+.logo i {
+	font-size: 10px;
+	transform: scale(5);
+	opacity: 1;
+}
+
 .logo.day {
 	color: white;
 }
@@ -306,8 +312,20 @@ section {
 	visibility: visible;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 760px) {
 	.container {
-		width: 600px;
+		width: 540px;
+	}
+}
+
+@media screen and (max-device-width: 767px) and (orientation: portrait) {
+	.header i {
+		font-size: 50px;
+	}
+	
+	.logo i {
+		font-size: 30px;
+		transform: scale(5);
+		opacity: 1;
 	}
 }

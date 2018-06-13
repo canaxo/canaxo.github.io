@@ -19,14 +19,6 @@ window.onload = () => {
 		subscribe.innerHTML = 'subscribe'
 	}
 	
-	console.log(readCookie('timer'))
-	
-	if(readCookie('timer') != null) {
-		video.currentTime = parseFloat(readCookie('timer'))
-	} else {
-		createCookie('timer', '0', 99999)
-	}
-	
 	if(readCookie('theme') != null) {
 		if(readCookie('theme') == 'night') {
 			day.style.display = 'inline'
@@ -52,6 +44,12 @@ window.onload = () => {
 			els[i].classList.add('day')
 		}
 	}
+	
+	if(sessionStorage.getItem('time') != null) {
+		video.currentTime = sessionStorage.getItem('time')
+	} else {
+		sessionStorage.setItem('time', 0)
+	}
 
 	menu.style.height = document.clientHeight + 'px'
 }
@@ -66,9 +64,11 @@ var close = document.getElementById('close')
 var els = document.body.querySelectorAll('*')
 
 setInterval(() => {
-	createCookie('timer', video.currentTime, 99999)
-	console.log('cookie with time ' + readCookie('timer'))
-}, 5000)
+	if(!video.paused) {
+		sessionStorage.setItem('time', video.currentTime)
+		console.log(sessionStorage.getItem('time'))
+	}
+}, 500)
 
 function createCookie(name,value,days) {
 	if (days) {
