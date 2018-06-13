@@ -337,11 +337,7 @@ section {
 		width: 98%;
 	}
 	
-	.video.right v[dun="cinema"] {
-		display: none;
-	}
-	
-	.video.right v[dun="gear"] {
+	#non-util-settings {
 		display: none;
 	}
 }
