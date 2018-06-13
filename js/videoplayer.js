@@ -144,10 +144,14 @@ function displayControls() {
 	video.style.cursor = 'default'
 }
 
-window.onkeypress = (e) => {
-	if(e.key === ' ' && !video.paused) pauser()
-	else if(e.key === ' ' && video.paused) player()
-	else if(e.key === 'ArrowRight') video.currentTime += 10
+window.onkeydown = (e) => {
+	if(e.key === ' ' && !video.paused) {
+		pauser()
+		return !(e.keyCode == 32 && e.target == document.body)
+	} else if(e.key === ' ' && video.paused) {
+		player()
+		return !(e.keyCode == 32 && e.target == document.body)
+	} else if(e.key === 'ArrowRight') video.currentTime += 10
 	else if(e.key === 'ArrowLeft') video.currentTime -= 10
 }
 

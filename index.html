@@ -3,10 +3,12 @@
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="icon" type="image/png" href="https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/milky-way_1f30c.png"/>
+		
 		<title>Nowlow's video player</title>
 		<link rel="stylesheet" href="css/videoplayer.css"/>
 		<link rel="stylesheet" href="css/main.css"/>
 		<link rel="stylesheet" href="css/fontawesome/fontawesome-all.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta property="og:title" content="Nowlow's video player - Tests" />
 		<meta property="og:type" content="video" />
 		<meta property="og:url" content="https://nowlow.github.io/" />
@@ -20,14 +22,14 @@
 				<i id="day" class="far fa-moon"></i>
 				<i id="night" style="display: none" class="fas fa-moon"></i>
 			</span>
-			<span class="logo">🌌 Maitre Nowlow's Player</span>
+			<span class="logo"><i class="fab fa-magento" style="font-size: 10px; transform: scale(5); opacity: 1"></i></span>
 			<span>
 				<a href="https://github.com/nowlow/nowlow.github.io"><i class="fab fa-github"></i></a>
 				<i class="fas fa-user-alt"></i>
 			</span>
 		</div>
 		<div class="header">
-			<span class="logo">🌌 Maitre Nowlow's Player</span>
+			<span class="logo"><span class="logo"><i class="fab fa-magento" style="font-size: 10px; transform: scale(5); opacity: 1"></i></span></span>
 		</div>
 		<div id="menu" style="visibility: hidden;">
 			<i id="close" class="fas fa-times"></i><br />
@@ -36,37 +38,25 @@
 				Ici non plus y a rien hein cherche pas
 				</div>
 				<div class="element">
-				Ici non plus y a rien hein cherche pas
+				Accueil
 				</div>
 				<div class="element">
-				Ici non plus y a rien hein cherche pas
+				Options
 				</div>
 				<div class="element">
-				Ici non plus y a rien hein cherche pas
+				Dernières vidéos
 				</div>
 				<div class="element">
-				Ici non plus y a rien hein cherche pas
-				</div>
-				<div class="element">
-				Ici non plus y a rien hein cherche pas
-				</div>
-				<div class="element">
-				Ici non plus y a rien hein cherche pas
-				</div>
-				<div class="element">
-				Ici non plus y a rien hein cherche pas
-				</div>
-				<div class="element">
-				Ici non plus y a rien hein cherche pas
-				</div>
-				<div class="element">
-				Ici non plus y a rien hein cherche pas
+				Catégories
 				</div>
 			</div>
 		</div>
 			<div class="video">
 				<span id="startplaying"><v dun="play"></v></span>
-				<video id="video" preload="metadata"><source src="http://93.4.85.60/NowlowPlayer/src/videos/video.mp4" type="video/mp4"></video>
+				<video id="video" preload="metadata">
+					<source src="http://93.4.85.60/NowlowPlayer/src/videos/video.mp4" type="video/mp4">
+					Rick & Morty . Video Not found
+				</video>
 				<div id="vmenu" style="display: none">
 					Ben non y a rien ici tu t'attendais à quoi?
 				</div>
@@ -93,7 +83,7 @@
 			<div class="container">
 				<section class="infos">
 				<span>
-					<span id="seriesname">Rick & Morty <span class="thtRocks"> 🤘🏻 <span class="thtDesc">That rocks!</span></span></span>
+					<span id="seriesname">Rick & Morty <span class="thtRocks"><i class="fas fa-check-circle"></i><span class="thtDesc">That rocks!</span></span></span>
 					<span>
 					<span id="episode">E7·S01</span>
 					<span id="subscribe"></span>
@@ -109,9 +99,11 @@
 				</section>
 		</div>
 			<div class="separation"></div>
-		<div class="footer">Aucun droit réservé. 2018 Maitre Nowlow<br/>
-		<i class="fas fa-space-shuttle"></i> Powered by Naoufel Berrada.<br/>
-		La police utilisée par le lecteur est entièrement faite par moi mais j'utilise FontAwesome pour le flat faut pas déconner <i class="fab fa-font-awesome"></i></div>
+		<div class="footer">
+			<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/milky-way_1f30c.png" alt="galaxy_logo" width="30px" height="30px"/> Maitre Nowlow's video player<br />
+			Aucun droit réservé. 2018 Maitre Nowlow<br/>
+			<i class="fas fa-space-shuttle"></i> Powered by Naoufel Berrada.<br/>
+			La police utilisée par le lecteur est entièrement faite par moi mais j'utilise FontAwesome pour le flat faut pas déconner <i class="fab fa-font-awesome"></i></div>
 		<script src="js/vfont.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/videoplayer.js"></script>

@@ -19,6 +19,8 @@ window.onload = () => {
 		subscribe.innerHTML = 'subscribe'
 	}
 	
+	console.log(readCookie('timer'))
+	
 	if(readCookie('timer') != null) {
 		video.currentTime = parseFloat(readCookie('timer'))
 	} else {
@@ -65,7 +67,8 @@ var els = document.body.querySelectorAll('*')
 
 setInterval(() => {
 	createCookie('timer', video.currentTime, 99999)
-}, 500)
+	console.log('cookie with time ' + readCookie('timer'))
+}, 5000)
 
 function createCookie(name,value,days) {
 	if (days) {
