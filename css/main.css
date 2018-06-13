@@ -315,9 +315,9 @@ section {
 @media screen and (max-width: 760px) {
 	.container {
 		width: 91.5%;
-		margin: 1%;
 		padding-left: 10px;
 		padding-right: 10px;
+		margin: 0 auto;
 	}
 	
 	.infos {
