@@ -42,8 +42,8 @@ window.onload = () => {
 			}
 		}
 	} else {
-		day.style.display = 'inline'
-		night.style.display = 'none'
+		night.style.display = 'inline'
+		day.style.display = 'none'
 		createCookie('theme', 'day', 99999)
 		document.body.classList.add('day')
 		for (var i = 0; i < els.length; i++) {
