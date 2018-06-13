@@ -92,7 +92,7 @@ a.night {
 
 .logo i {
 	font-size: 10px;
-	transform: scale(5);
+	transform: scale(2);
 	opacity: 1;
 }
 
@@ -343,8 +343,16 @@ section {
 }
 
 @media screen and (max-device-width: 767px) and (orientation: portrait) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		font-size: 15px;
+	}
+	
 	.header i {
-		font-size: 30px;
+		font-size: 15px;
 	}
 	
 	.header.logo i {
@@ -353,24 +361,11 @@ section {
 	
 	.trueone.logo i {
 		font-size: 30px;
-		transform: scale(5);
+		transform: scale(2);
 		opacity: 1;
 	}
-}
-
-@media screen and (max-device-width: 460px) and (orientation: portrait) {
-	.header i {
+	
+	.falseone span {
 		display: none;
-		font-size: 30px;
-	}
-	
-	.trueone {
-		display: block;
-	}
-	
-	.trueone.logo i {
-		font-size: 30px;
-		transform: scale(5);
-		opacity: 1;
 	}
 }
