@@ -51,7 +51,7 @@ window.onload = () => {
 		}
 	}
 
-	menu.style.height = screen.height + 'px'
+	menu.style.height = document.clientHeight + 'px'
 }
 
 var subscribe = document.getElementById('subscribe')
@@ -60,15 +60,12 @@ var menu = document.getElementById('menu')
 var menudisplayer = document.getElementById('menudisplayer')
 var day = document.getElementById('day')
 var night = document.getElementById('night')
-var els = document.body.querySelectorAll("*")
+var close = document.getElementById('close')
+var els = document.body.querySelectorAll('*')
 
 setInterval(() => {
 	createCookie('timer', video.currentTime, 99999)
 }, 500)
-
-window.onresize = () => {
-	menu.style.height = screen.height + 'px'
-}
 
 function createCookie(name,value,days) {
 	if (days) {
@@ -115,14 +112,16 @@ subscribe.onclick = () => {
 
 menudisplayer.onclick = () => {
 	setTimeout(() => {
-		if(menu.style.visibility == 'hidden') {
-			menu.style.visibility = 'visible'
-			menu.style.width = '350px'
-			console.log(menu.style.visibility)
-		} else {
+		menu.style.visibility = 'visible'
+		menu.style.width = '360px'
+	}, 50)
+}
+
+close.onclick = () => {
+	setTimeout(() => {
+		menu.style.width = '-10px'
 			menu.style.visibility = 'hidden'
 			menu.style.width = '0'
-		}
 	}, 50)
 }
 
@@ -157,8 +156,9 @@ document.onclick = (e) => {
 		var menuposYs = menu.offsetTop
 		var menuposYe = menuposYs + menu.offsetHeight
 		if(!(menuposXs <= e.clientX && e.clientX <= menuposXe) || !(menuposYs <= e.clientY && e.clientY <= menuposYe)) {
-			menu.style.width = '0'
-			menu.style.visibility = 'hidden'
+			menu.style.width = '-10px'
+				menu.style.visibility = 'hidden'
+				menu.style.width = '0'
 		}
 	}
 }

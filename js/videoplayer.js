@@ -1,7 +1,7 @@
 var vs = document.querySelectorAll('v')
 var video_c = document.querySelector('.video')
 var video = document.getElementById('video')
-var menu = document.getElementById('menu')
+var vmenu = document.getElementById('vmenu')
 var timebar = document.getElementById('timebar')
 var progressbar = document.getElementById('progressbar')
 var controlbar = document.getElementById('controlbar')
@@ -14,7 +14,7 @@ Video.gear = vs[3]
 Video.cinemaMode = vs[4]
 Video.fullscreenMode = vs[5]
 
-var menuDisplayed = false
+var vmenuDisplayed = false
 var cinemaMode = false
 var controlshover = false
 
@@ -58,14 +58,14 @@ function placePPlay() {
 }
 
 Video.gear.onclick = function () {
-	if(menuDisplayed) {
-		menu.style.display = 'none'
+	if(vmenuDisplayed) {
+		vmenu.style.display = 'none'
 		Video.gear.style.transform = 'rotate(90deg)'
-		menuDisplayed = false
+		vmenuDisplayed = false
 	} else {
-		menu.style.display = 'block'
+		vmenu.style.display = 'block'
 		Video.gear.style.transform = 'rotate(-90deg)'
-		menuDisplayed = true
+		vmenuDisplayed = true
 	}
 }
 
