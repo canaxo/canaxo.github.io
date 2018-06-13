@@ -308,6 +308,6 @@ section {
 
 @media screen and (max-width: 680px) {
 	.container {
-		background-color: aliceblue;
+		width: 600px;
 	}
 }
