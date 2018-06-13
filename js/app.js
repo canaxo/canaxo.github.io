@@ -157,8 +157,8 @@ document.onclick = (e) => {
 		var menuposYs = menu.offsetTop
 		var menuposYe = menuposYs + menu.offsetHeight
 		if(!(menuposXs <= e.clientX && e.clientX <= menuposXe) || !(menuposYs <= e.clientY && e.clientY <= menuposYe)) {
-			menu.style.visibility = 'hidden'
 			menu.style.width = '0'
+			menu.style.visibility = 'hidden'
 		}
 	}
 }
