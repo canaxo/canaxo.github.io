@@ -54,6 +54,7 @@ window.onload = () => {
 	menu.style.height = document.clientHeight + 'px'
 }
 
+var container = document.querySelector('.container')
 var subscribe = document.getElementById('subscribe')
 var video = document.getElementById('video')
 var menu = document.getElementById('menu')

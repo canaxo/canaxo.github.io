@@ -72,7 +72,7 @@ a.night {
 
 .trueone {
 	position: fixed;
-	width: 99vw;
+	width: 100vw;
 }
 
 .logo {
@@ -314,13 +314,47 @@ section {
 
 @media screen and (max-width: 760px) {
 	.container {
-		width: 540px;
+		width: 84.5%;
+		margin: 6.5px;
+	}
+	
+	.infos {
+		flex-flow: column-reverse;
+		align-content: flex-start;
+		align-items: flex-start;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	.infos #episodename {
+		margin-bottom: 5px;
+	}
+	
+	.video {
+		width: 98%;
+	}
+	
+	.video.right v[dun="cinema"], .video.right v[dun="gear"] {
+		display: none;
 	}
 }
 
 @media screen and (max-device-width: 767px) and (orientation: portrait) {
 	.header i {
 		font-size: 50px;
+	}
+	
+	.logo i {
+		font-size: 30px;
+		transform: scale(5);
+		opacity: 1;
+	}
+}
+
+@media screen and (max-device-width: 460px) and (orientation: portrait) {
+	.header i {
+		font-size: 30px;
 	}
 	
 	.logo i {

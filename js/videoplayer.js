@@ -27,12 +27,17 @@ function updateTimer() {
 }
 
 updateTimer()
+resizeVideo()
 
 function player () {
 	video.play()
 	Video.playButton.style.display = 'none'
 	Video.pauseButton.style.display = 'block'
 	Video.pPlayButton.style.display = 'none'
+}
+
+function resizeVideo() {
+	video_c.style.height = (video_c.offsetWidth * 9/16) + 'px'
 }
 
 function pauser() {
@@ -162,6 +167,11 @@ video.ontimeupdate = function () {
 
 Video.playButton.addEventListener('click', player)
 Video.pPlayButton.addEventListener('click', player)
+
+window.onresize = () => {
+	resizeVideo()
+	placePPlay()
+}
 
 Video.pauseButton.addEventListener('click', pauser)
 video.addEventListener('click', () => {
