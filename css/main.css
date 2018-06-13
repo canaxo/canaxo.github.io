@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@font-face {
+	font-family: VFont;
+	src: url('fonts/VFont.otf');
+}
+
+* {
+	font-family: 'Source Sans Pro', Arial;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: #BCCAD9;
+	background-size: 100% 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #1c2a39;
+}
+
+.header {
+	height: 25px;
+	background: #1c2a39;
+	padding: 17.5px;
+	z-index: 10;
+	width: 100vw;
+	margin-left: -2%;
+}
+
+.footer {
+	color: white;
+	font-weight: bold;
+	background: #4c5a69;
+	padding: 50px;
+}
+
+.trueone {
+	position: fixed;
+}
+
+.logo {
+	background-color: white;
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 4px;
+	font-weight: bold;
+	color: #1c2a39;
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	transition: 0.2s;
+}
+
+.logo:hover {
+	background-color: #1c2a39;
+	color: white;
+}
+
+.container {
+	margin: 0 auto;
+	width: 640px;
+	padding: 10px;
+	padding-top: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.separation {
+	margin-bottom: 20px;
+}
+
+.video {
+	margin-top: 20px;
+}
+
+#seriesname {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row;
+	justify-content: space-between;
+	font-size: 20px;
+	padding: 10px;
+	background-color: #1c2a39;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+section {
+	margin-bottom: 10px;
+}
+
+.infos {
+	display: flex;
+	flex-flow: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.infos span {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.infos span span {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-left: 3px;
+}
+
+#episode {
+	margin-bottom: 3px;
+	font-size: 10px;
+	color: white;
+	padding: 5px;
+	border-radius: 3px;
+	background-color: #3c4a59;
+}
+
+#subscribe {
+	padding: 5px;
+	font-size: 10px;
+	border-radius: 3px;
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+	min-width: 41px;
+	min-height: 15px;
+	transition: 0.2s;
+}
+
+.ho {
+	background-color: darkred;
+	color: white;
+}
+
+#episodename {
+	font-size: 25px;
+	font-weight: 300;
+}
+
+#description {
+	font-size: 15px;
+	padding: 20px;
+	background-color: #ecf0f1;
+	border-radius: 10px;
+}
+
+.thtRocks {
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+}
+
+.thtDesc {
+	visibility: hidden;
+	font-size: 15px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+    border-radius: 3px;
+	margin-top: 40px;
+	
+    position: absolute;
+    z-index: 1;
+}
+
+.thtRocks:hover .thtDesc {
+	visibility: visible;
+}

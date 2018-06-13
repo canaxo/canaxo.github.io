@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8"/>
+		<title>🌌 Nowlow's video player</title>
+		<link rel="stylesheet" href="css/videoplayer.css"/>
+		<link rel="stylesheet" href="css/main.css"/>
+		<meta property="og:title" content="Nowlow's video player - Tests" />
+		<meta property="og:type" content="video" />
+		<meta property="og:url" content="http://192.168.1.66/NowlowPlayer/" />
+		<meta property="og:image" content="https://1n469r2k28cd3i0ovv1yqnaz-wpengine.netdna-ssl.com/wp-content/uploads/2016/09/jw-player.png" />
+	</head>
+	
+	<body>
+		<div class="header trueone">
+			<center>
+			<span class="logo">🌌 Maitre Nowlow's Player</span>
+			</center>
+		</div>
+		<div class="header">
+		</div>
+			<div class="video">
+				<span id="startplaying"><v dun="play"></v></span>
+				<video id="video" preload="metadata"><source src="src/videos/video.mp4" type="video/mp4"></video>
+				<div id="menu" style="display: none">
+					Ben non y a rien ici tu t'attendais à quoi?
+				</div>
+				<div id="controlbar">
+					<div id="timebar">
+						<div id="progressbar"></div>
+					</div>
+					<div class="settings">
+						<div class="left">
+							<v dun="play"></v>
+							<v dun="pause" style="display: none"></v>
+							<span id="timer" onload="updateTimer()"></span>
+						</div>
+
+						<div class="right">
+							<v dun="gear"></v>
+							<v dun="cinema"></v>
+							<v dun="fullscreen"></v>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="separation"></div>
+			<div class="container">
+				<section class="infos">
+				<span>
+					<span id="seriesname">Rick & Morty <span class="thtRocks"> 🤘🏻 <span class="thtDesc">That rocks!</span></span></span>
+					<span>
+					<span id="episode">E7·S01</span>
+					<span id="subscribe"></span>
+					</span>
+				</span>
+				<span id="episodename">Gazorpazorp Junior</span>
+				</section>
+				<section id="description">Voici un épisode de Rick & Morty téléchargé et réuploadé totalement illégallement. J'espère que vous serez heureux et reconnaissant du fait que j'ai pris des risques pour vous. Allez abonnez vou.. ah nan c'est pas dispo, ben suivez moi sur des réseaux sociaux tels que Twitter, twitter ou twitter: <br />
+				Twitter : <a href="https://www.twitter.com/MaitreNowlow">@MaitreNowlow</a><br/>
+				Twitter : <a href="https://www.twitter.com/MaitreNowlow">@MaitreNowlow</a><br/>
+				Twitter : <a href="https://www.twitter.com/MaitreNowlow">@MaitreNowlow</a><br/>
+				Je tiens à préciser que ce site n'as pas du tout vocation à être un "site de streaming dégeu" ni même un site de streaming en fait, c'était juste pour le défi de réaliser un lecteur de vidéos en deux jours de A à Z (lecteur en soi + police d'écriture qui permets de faire de jolies ptites icones tels que le <v style="color: black" dun="play"></v>ou le <v style="color: black" dun="gear"></v> qui ne sont rien d'autre qu'un "A" et un "I"). Bref, enjoy l'épisode c'est cadeau.
+				</section>
+		</div>
+			<div class="separation"></div>
+		<div class="footer">Aucun droit réservé. 2018 Maitre Nowlow<br/>
+		🚀 Powered by Naoufel Berrada and no one else.<br/>
+		J'aime utiliser des emojis sur mes sites ⚔️</div>
+		<script src="js/vfont.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/videoplayer.js"></script>
+	</body>
+</html>
