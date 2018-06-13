@@ -314,8 +314,10 @@ section {
 
 @media screen and (max-width: 760px) {
 	.container {
-		width: 84.5%;
-		margin: 6.5px;
+		width: 91.5%;
+		margin: 1%;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	
 	.infos {
@@ -342,10 +344,14 @@ section {
 
 @media screen and (max-device-width: 767px) and (orientation: portrait) {
 	.header i {
-		font-size: 50px;
+		font-size: 30px;
 	}
 	
-	.logo i {
+	.header.logo i {
+		font-size: 30px;
+	}
+	
+	.trueone.logo i {
 		font-size: 30px;
 		transform: scale(5);
 		opacity: 1;
@@ -354,10 +360,15 @@ section {
 
 @media screen and (max-device-width: 460px) and (orientation: portrait) {
 	.header i {
+		display: none;
 		font-size: 30px;
 	}
 	
-	.logo i {
+	.trueone {
+		display: block;
+	}
+	
+	.trueone.logo i {
 		font-size: 30px;
 		transform: scale(5);
 		opacity: 1;

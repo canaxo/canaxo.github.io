@@ -26,6 +26,7 @@ function updateTimer() {
 	timer.innerHTML = currentM + ':' + currentS + ' / ' + absM + ':' + absS
 }
 
+placePPlay()
 updateTimer()
 resizeVideo()
 
