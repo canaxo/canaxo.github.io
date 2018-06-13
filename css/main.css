@@ -9,17 +9,29 @@
 	font-family: 'Source Sans Pro', Arial;
 	padding: 0;
 	margin: 0;
+	transition: background-color 0.2s;
 }
 
 body {
 	overflow-x: hidden;
-	background-color: #BCCAD9;
 	background-size: 100% 100%;
+}
+
+body.day {
+	background-color: #BCCAD9;
+}
+
+body.night {
+	background-color: #3c4a59;
 }
 
 a {
 	text-decoration: none;
 	color: #1c2a39;
+}
+
+a.night {
+	color: cadetblue;
 }
 
 .header {
@@ -63,7 +75,6 @@ a {
 }
 
 .logo {
-	background-color: white;
 	padding: 10px;
 	margin: 0 auto;
 	border-radius: 4px;
@@ -76,29 +87,38 @@ a {
 	transition: 0.2s;
 }
 
+.logo.day {
+	background-color: white;
+}
+
+.logo.night {
+	background-color: #3c4a59;
+	color: white;
+}
+
 .logo:hover {
 	background-color: #1c2a39;
 	color: white;
 }
 
 #menu {
-	width: 350px;
-	height: 0;
+	width: 0px;
+	height: 100vh;
 	position: fixed;
-	padding: 10px;
 	background-color: rgba(92, 106, 121, 0.95);
-	border-radius: 5px;
 	display: flex;
 	justify-content: flex-start;
-	flex-direction: column;
 	flex-flow: column;
 	align-content: flex-start;
-	margin: 10px;
 	font-size: 20px;
 	z-index: 11;
 	overflow: hidden;
 	cursor: pointer;
-	transition: 0.2s;
+	transition: width 0.2s;
+	top: 200px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .container {
@@ -108,8 +128,16 @@ a {
 	padding-top: 15px;
 	padding-left: 50px;
 	padding-right: 50px;
-	background-color: white;
 	border-radius: 10px;
+}
+
+.container.day {
+	background-color: white;
+}
+
+.container.night {
+	background-color: rgba(28, 42, 57, 0.7);
+	color: white;
 }
 
 .separation {
@@ -196,8 +224,23 @@ section {
 #description {
 	font-size: 15px;
 	padding: 20px;
-	background-color: #ecf0f1;
 	border-radius: 10px;
+}
+
+#description.day {
+	background-color: #ecf0f1;
+}
+
+#description.night {
+	background-color: #1c2a39;
+}
+
+.indesc.day {
+	color: black;
+}
+
+.indesc.night {
+	color: white;
 }
 
 .thtRocks {
