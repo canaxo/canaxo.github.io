@@ -50,10 +50,12 @@ function pauser() {
 }
 
 function resizeVideo() {
+	if(!cinemaMode) {
 	if(window.pageXOffset > 767) {
 		video_c.style.height = '360px'
 	} else {
 		video_c.style.height = (video_c.offsetWidth * 9/16) + 'px'
+	}
 	}
 }
 
