@@ -180,8 +180,10 @@ window.onresize = () => {
 
 Video.pauseButton.addEventListener('click', pauser)
 video.addEventListener('click', () => {
-	if(!video.paused) pauser()
-	else if(video.paused) player()
+	if(!isMobile) {
+		if(!video.paused) pauser()
+		else if(video.paused) player()
+	}
 })
 
 video.addEventListener('mouseover', () => {
