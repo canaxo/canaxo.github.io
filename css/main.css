@@ -365,4 +365,12 @@ section {
 	#menu {
 		max-width: 100%;
 	}
+	
+	.elements {
+		height: 50%;
+	}
+	
+	.element {
+		width: 100%;
+	}
 }

@@ -124,7 +124,7 @@ subscribe.onclick = () => {
 menudisplayer.onclick = () => {
 	setTimeout(() => {
 		menu.style.visibility = 'visible'
-		menu.style.width = menu.style.maxWidth
+		menu.style.width = '100%'
 	}, 50)
 }
 
