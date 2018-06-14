@@ -35,10 +35,7 @@ function player () {
 	Video.playButton.style.display = 'none'
 	Video.pauseButton.style.display = 'block'
 	Video.pPlayButton.style.display = 'none'
-}
-
-function resizeVideo() {
-	video_c.style.height = (video_c.offsetWidth * 9/16) + 'px'
+	resizeVideo()
 }
 
 function pauser() {
@@ -47,9 +44,28 @@ function pauser() {
 	Video.playButton.style.display = 'block'
 	Video.pauseButton.style.display = 'none'
 	Video.pPlayButton.style.display = 'block'
+	resizeVideo()
 	displayControls()
 	
 }
+
+function resizeVideo() {
+	if(window.pageXOffset > 767) {
+		video_c.style.height = '360px'
+	} else {
+		video_c.style.height = (video_c.offsetWidth * 9/16) + 'px'
+	}
+}
+
+video_c.onresize = () => {
+	resizeVideo()
+}
+
+document.body.onresize = () => {
+	console.log('coucou')
+	resizeVideo()
+}
+
 
 function placePPlay() {
 	Video.pPlayButton.style.opacity = '0.0'
@@ -181,8 +197,11 @@ video.ontimeupdate = function () {
 Video.playButton.addEventListener('click', player)
 
 window.onresize = () => {
+	console.log('coucou')
+	setTimeout(() => {
 	resizeVideo()
 	placePPlay()
+	}, 150)
 }
 
 Video.pauseButton.addEventListener('click', pauser)
