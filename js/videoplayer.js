@@ -208,6 +208,7 @@ window.onresize = () => {
 
 Video.pauseButton.addEventListener('click', pauser)
 video.addEventListener('click', () => {
+	console.log(isMobile)
 	if(!isMobile) {
 		if(!video.paused) pauser()
 		else if(video.paused) player()
