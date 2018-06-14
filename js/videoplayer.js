@@ -134,6 +134,8 @@ function toggleFullscreen() {
 	} else {
 		exitFullscreen()
 	}
+	
+	resizeVideo()
 }
 
 Video.fullscreenMode.onclick = function () {
