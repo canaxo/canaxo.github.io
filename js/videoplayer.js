@@ -94,21 +94,29 @@ Video.cinemaMode.onclick = function () {
 	}
 }
 
+function enterFullscreen() {
+	if(video_c.requestFullscreen) video_c.requestFullscreen()
+	else if(video_c.webkitRequestFullscreen) video_c.webkitRequestFullscreen()
+	else if(video_c.mozRequestFullScreen) video_c.mozRequestFullScreen()
+	else if(video_c.msRequestFullscreen) video_c.msRequestFullscreen()
+}
+
+function exitFullscreen() {
+	if (document.exitFullscreen) document.exitFullscreen()
+	else if (document.webkitExitFullscreen) document.webkitExitFullscreen()
+	else if (document.mozCancelFullScreen) document.mozCancelFullScreen()
+	else if (document.msExitFullscreen) document.msExitFullscreen()
+}
+
 function toggleFullscreen() {
 	var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
         (document.msFullscreenElement && document.msFullscreenElement !== null)
 	if(!isInFullScreen) {
-		if(video_c.requestFullscreen) video_c.requestFullscreen()
-		else if(video_c.webkitRequestFullscreen) video_c.webkitRequestFullscreen()
-		else if(video_c.mozRequestFullScreen) video_c.mozRequestFullScreen()
-		else if(video_c.msRequestFullscreen) video_c.msRequestFullscreen()
+		enterFullscreen()
 	} else {
-		if (document.exitFullscreen) document.exitFullscreen()
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen()
-        else if (document.mozCancelFullScreen) document.mozCancelFullScreen()
-        else if (document.msExitFullscreen) document.msExitFullscreen()
+		exitFullscreen()
 	}
 }
 
@@ -199,9 +207,11 @@ video.addEventListener('mousemove', () => {
 })
 
 function onScreenChange({ target: { type } }) {
-	console.log('woa')
 	if (isMobile && !video.paused) {
-		toggleFullscreen()
+		if(!this.fullscreen && type.startsWith("landscape") && !this.fullscreenLock)
+			enterFullscreen()
+		else
+			exitFullscreen()
 	}
 }
 
