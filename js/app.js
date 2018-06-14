@@ -69,13 +69,10 @@ var isMobile = false
 var isPortrait
 
 if(ua.indexOf('mobile') > -1) isMobile = true
-console.log(isMobile)
-console.log(ua)
 
 setInterval(() => {
 	if(!video.paused) {
 		sessionStorage.setItem('time', video.currentTime)
-		console.log(sessionStorage.getItem('time'))
 	}
 }, 500)
 
