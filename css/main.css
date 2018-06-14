@@ -355,12 +355,11 @@ section {
 	}
 	
 	.header.logo i {
-		font-size: 30px;
+		font-size: 50px;
 	}
 	
 	.trueone.logo i {
-		font-size: 30px;
-		transform: scale(2);
+		font-size: 50px;
 		opacity: 1;
 	}
 	
