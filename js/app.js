@@ -45,7 +45,7 @@ window.onload = () => {
 		}
 	}
 	
-	if(sessionStorage.getItem('time' + document.getElementById('episodename').innerHTML != null)) {
+	if(sessionStorage.getItem('time' + document.getElementById('episodename').innerHTML) != null) {
 		video.currentTime = sessionStorage.getItem('time' + document.getElementById('episodename').innerHTML)
 	} else {
 		sessionStorage.setItem('time' + document.getElementById('episodename').innerHTML, 0)
