@@ -42,7 +42,7 @@ a.night {
 	justify-content: space-between;
 	align-content: center;
 	background: #1c2a39;
-	padding: 17.5px;
+	padding: 10px;
 	z-index: 10;
 	width: 100vw;
 	-webkit-box-sizing: border-box;
@@ -91,8 +91,7 @@ a.night {
 }
 
 .logo i {
-	font-size: 10px;
-	transform: scale(2);
+	font-size: 50px;
 	opacity: 1;
 }
 

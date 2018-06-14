@@ -52,9 +52,10 @@ window.onload = () => {
 	}
 
 	menu.style.height = document.clientHeight + 'px'
-	console.log(navigator.appVersion)
+	close.innerHTML = av
 }
 
+var av = navigator.appVersion.toLowerCase()
 var container = document.querySelector('.container')
 var subscribe = document.getElementById('subscribe')
 var video = document.getElementById('video')
