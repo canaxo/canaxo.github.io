@@ -76,33 +76,6 @@ setInterval(() => {
 	}
 }, 500)
 
-
-function orientationChange(or) {
-	if(isMobile) {
-		if(or.matches) {
-			if(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement) {
-				if (document.exitFullscreen) document.exitFullscreen()
-        		else if (document.webkitExitFullscreen) document.webkitExitFullscreen()
-        		else if (document.mozCancelFullScreen) document.mozCancelFullScreen()
-        		else if (document.msExitFullscreen) document.msExitFullscreen()
-			}
-			isPortrait = true
-		} else {
-			if(!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement)) {
-				if(video_c.requestFullscreen) video_c.requestFullscreen()
-				else if(video_c.webkitRequestFullscreen) video_c.webkitRequestFullscreen()
-				else if(video_c.mozRequestFullScreen) video_c.mozRequestFullScreen()
-				else if(video_c.msRequestFullscreen) video_c.msRequestFullscreen()
-			}
-			isPortrait = false
-		}
-	}
-}
-
-var portraitOrientation = window.matchMedia("(orientation:portrait)")
-orientationChange(portraitOrientation)
-portraitOrientation.addListener(orientationChange)
-
 subscribe.onclick = () => {
 	if(readCookie('subscribed') == 'false') {
 		subscribe.style.backgroundColor = '#CCC'

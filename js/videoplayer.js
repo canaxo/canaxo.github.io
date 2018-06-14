@@ -94,7 +94,7 @@ Video.cinemaMode.onclick = function () {
 	}
 }
 
-function toggleFullscreen(isFullscreen) {
+function toggleFullscreen() {
 	var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
@@ -171,7 +171,6 @@ video.ontimeupdate = function () {
 }
 
 Video.playButton.addEventListener('click', player)
-Video.pPlayButton.addEventListener('click', player)
 
 window.onresize = () => {
 	resizeVideo()
@@ -186,6 +185,7 @@ video.addEventListener('click', () => {
 	}
 })
 
+Video.pPlayButton.addEventListener('click', player)
 video.addEventListener('mouseover', () => {
 	if(!controlshover) toggleControls()
 })
@@ -197,3 +197,12 @@ video.addEventListener('mousemove', () => {
 	}, 1500)
 	video.onmousemove = displayControls()
 })
+
+function onScreenChange({ target: { type } }) {
+	console.log('woa')
+	if (isMobile && !video.paused) {
+		toggleFullscreen()
+	}
+}
+
+window.screen.orientation.addEventListener('change', onScreenChange)
