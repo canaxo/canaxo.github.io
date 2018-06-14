@@ -45,10 +45,10 @@ window.onload = () => {
 		}
 	}
 	
-	if(sessionStorage.getItem('time' + document.getElementById('episodename').innerHTML) != null) {
-		video.currentTime = sessionStorage.getItem('time' + document.getElementById('episodename').innerHTML)
+	if(sessionStorage.getItem('time of ' + document.getElementById('episodename').innerHTML) != null) {
+		video.currentTime = sessionStorage.getItem('time of ' + document.getElementById('episodename').innerHTML)
 	} else {
-		sessionStorage.setItem('time' + document.getElementById('episodename').innerHTML, 0)
+		sessionStorage.setItem('time of ' + document.getElementById('episodename').innerHTML, 0)
 	}
 	
 	menu.style.height = document.clientHeight + 'px'
@@ -72,7 +72,7 @@ if(ua.indexOf('mobile') > -1) isMobile = true
 
 setInterval(() => {
 	if(!video.paused) {
-		sessionStorage.setItem('time' + document.getElementById('episodename').innerHTML, video.currentTime)
+		sessionStorage.setItem('time of ' + document.getElementById('episodename').innerHTML, video.currentTime)
 	}
 }, 500)
 
