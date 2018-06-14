@@ -361,4 +361,8 @@ section {
 	.falseone span {
 		display: none;
 	}
+	
+	#menu {
+		max-width: 100%;
+	}
 }
