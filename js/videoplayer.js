@@ -94,8 +94,7 @@ Video.cinemaMode.onclick = function () {
 	}
 }
 
-Video.fullscreenMode.onclick = function () {
-	placePPlay()
+function toggleFullscreen(isFullscreen) {
 	var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
         (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
@@ -111,6 +110,11 @@ Video.fullscreenMode.onclick = function () {
         else if (document.mozCancelFullScreen) document.mozCancelFullScreen()
         else if (document.msExitFullscreen) document.msExitFullscreen()
 	}
+}
+
+Video.fullscreenMode.onclick = function () {
+	placePPlay()
+	toggleFullscreen()
 }
 
 function toggleControls() {

@@ -50,12 +50,11 @@ window.onload = () => {
 	} else {
 		sessionStorage.setItem('time', 0)
 	}
-
+	
 	menu.style.height = document.clientHeight + 'px'
-	close.innerHTML = av
 }
 
-var av = navigator.appVersion.toLowerCase()
+var ua = navigator.userAgent.toLowerCase()
 var container = document.querySelector('.container')
 var subscribe = document.getElementById('subscribe')
 var video = document.getElementById('video')
@@ -66,12 +65,46 @@ var night = document.getElementById('night')
 var close = document.getElementById('close')
 var els = document.body.querySelectorAll('*')
 
+var isMobile = false
+var isPortrait
+
+if(ua.indexOf('mobile') > -1) isMobile = true
+console.log(isMobile)
+console.log(ua)
+
 setInterval(() => {
 	if(!video.paused) {
 		sessionStorage.setItem('time', video.currentTime)
 		console.log(sessionStorage.getItem('time'))
 	}
 }, 500)
+
+
+function orientationChange(or) {
+	if(isMobile) {
+		if(or.matches) {
+			if(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement) {
+				if (document.exitFullscreen) document.exitFullscreen()
+        		else if (document.webkitExitFullscreen) document.webkitExitFullscreen()
+        		else if (document.mozCancelFullScreen) document.mozCancelFullScreen()
+        		else if (document.msExitFullscreen) document.msExitFullscreen()
+			}
+			isPortrait = true
+		} else {
+			if(!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement)) {
+				if(video_c.requestFullscreen) video_c.requestFullscreen()
+				else if(video_c.webkitRequestFullscreen) video_c.webkitRequestFullscreen()
+				else if(video_c.mozRequestFullScreen) video_c.mozRequestFullScreen()
+				else if(video_c.msRequestFullscreen) video_c.msRequestFullscreen()
+			}
+			isPortrait = false
+		}
+	}
+}
+
+var portraitOrientation = window.matchMedia("(orientation:portrait)")
+orientationChange(portraitOrientation)
+portraitOrientation.addListener(orientationChange)
 
 subscribe.onclick = () => {
 	if(readCookie('subscribed') == 'false') {
