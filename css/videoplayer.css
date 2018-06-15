@@ -116,6 +116,11 @@ v {
 	padding-right: 5px;
 }
 
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
 .left {
 	display: flex;
 	flex-direction: row;
