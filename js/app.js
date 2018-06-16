@@ -160,3 +160,9 @@ document.onclick = (e) => {
 window.onresize = () => {
 	resizeHeader()
 }
+
+function onScreenChange({ target: { type } }) {
+	resizeHeader()
+}
+
+window.screen.orientation.addEventListener('change', onScreenChange)
