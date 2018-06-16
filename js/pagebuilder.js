@@ -45,8 +45,6 @@ let video_request = fetch('JSON_content/videos.json', {
 				}
 				next.href = 'watch.html?id=' + json[rand]
 				document.title = json.seriesname + ' - ' + video_json.episode + ' - Nowlow\'s video player'
-			} else {
-				urlPar = 
 			}
 		})
 	} else {
