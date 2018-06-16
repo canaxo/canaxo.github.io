@@ -1,22 +1,30 @@
 window.onload = () => {
-	if(readCookie('subscribed') != null) {
-		if(readCookie('subscribed') == 'false') {
+	if(video != null) {
+		if(readCookie('subscribed') != null) {
+			if(readCookie('subscribed') == 'false') {
+				subscribe.style.backgroundColor = 'darkred'
+				subscribe.style.color = 'white'
+				subscribe.classList.add('ho')
+				subscribe.innerHTML = 'subscribe'
+			} else {
+				subscribe.style.backgroundColor = '#CCC'
+				subscribe.style.color = 'black'
+				subscribe.classList.add('ho')
+				subscribe.innerHTML = 'subscribed'
+			}
+		} else {
+			createCookie('subscribed', 'false', 99999)
 			subscribe.style.backgroundColor = 'darkred'
 			subscribe.style.color = 'white'
 			subscribe.classList.add('ho')
 			subscribe.innerHTML = 'subscribe'
-		} else {
-			subscribe.style.backgroundColor = '#CCC'
-			subscribe.style.color = 'black'
-			subscribe.classList.add('ho')
-			subscribe.innerHTML = 'subscribed'
 		}
-	} else {
-		createCookie('subscribed', 'false', 99999)
-		subscribe.style.backgroundColor = 'darkred'
-		subscribe.style.color = 'white'
-		subscribe.classList.add('ho')
-		subscribe.innerHTML = 'subscribe'
+		
+		if(sessionStorage.getItem('time of ' + document.getElementById('episodename').innerHTML) != null) {
+			video.currentTime = sessionStorage.getItem('time of ' + document.getElementById('episodename').innerHTML)
+		} else {
+			sessionStorage.setItem('time of ' + document.getElementById('episodename').innerHTML, 0)
+		}
 	}
 	
 	if(readCookie('theme') != null) {
@@ -45,12 +53,6 @@ window.onload = () => {
 		}
 	}
 	
-	if(sessionStorage.getItem('time of ' + document.getElementById('episodename').innerHTML) != null) {
-		video.currentTime = sessionStorage.getItem('time of ' + document.getElementById('episodename').innerHTML)
-	} else {
-		sessionStorage.setItem('time of ' + document.getElementById('episodename').innerHTML, 0)
-	}
-	
 	menu.style.height = document.clientHeight + 'px'
 }
 
@@ -71,24 +73,26 @@ var isPortrait
 if(ua.indexOf('mobile') > -1) isMobile = true
 
 setInterval(() => {
-	if(!video.paused) {
+	if(video != null && !video.paused) {
 		sessionStorage.setItem('time of ' + document.getElementById('episodename').innerHTML, video.currentTime)
 	}
 }, 500)
 
-subscribe.onclick = () => {
-	if(readCookie('subscribed') == 'false') {
-		subscribe.style.backgroundColor = '#CCC'
-		subscribe.style.color = 'black'
-		subscribe.innerHTML = 'subscribed'
-		createCookie('subscribed', 'true', 99999)
-		readCookie('subscribed')
-	} else {
-		subscribe.style.backgroundColor = 'darkred'
-		subscribe.style.color = 'white'
-		subscribe.innerHTML = 'subscribe'
-		createCookie('subscribed', 'false', 99999)
-		readCookie('subscribed')
+if(video != null) {
+	subscribe.onclick = () => {
+		if(readCookie('subscribed') == 'false') {
+			subscribe.style.backgroundColor = '#CCC'
+			subscribe.style.color = 'black'
+			subscribe.innerHTML = 'subscribed'
+			createCookie('subscribed', 'true', 99999)
+			readCookie('subscribed')
+		} else {
+			subscribe.style.backgroundColor = 'darkred'
+			subscribe.style.color = 'white'
+			subscribe.innerHTML = 'subscribe'
+			createCookie('subscribed', 'false', 99999)
+			readCookie('subscribed')
+		}
 	}
 }
 

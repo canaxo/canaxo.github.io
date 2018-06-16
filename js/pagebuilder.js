@@ -1,6 +1,16 @@
-var meta = document.head.querySelector('meta[name="video"]')
+function extractUrlParams(){	
+	var t = location.search.substring(1).split('&')
+	var f = []
+	for (var i=0; i<t.length; i++){
+		var x = t[ i ].split('=')
+		f[x[0]]=x[1]
+	}
+	return f
+}
 
-let video_request = fetch('JSON_content/videos/' + meta.getAttribute('content') + '.json', {
+var id = extractUrlParams()
+
+let video_request = fetch('JSON_content/videos/' + id[0] + '.json', {
 	method: 'GET',
 }).then(function (response) {
 	return response.json()
@@ -10,9 +20,15 @@ let video_request = fetch('JSON_content/videos/' + meta.getAttribute('content') 
 	var seriesname = document.getElementById('seriesname')
 	var episode = document.getElementById('episode')
 	var description = document.getElementById('description')
-	video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + meta.getAttribute('content').toLowerCase() + '.mp4'
-	episodename.innerHTML = json.episodename
-	seriesname.innerHTML = json.seriesname
-	episode.innerHTML = json.episode
-	description.innerHTML = json.description
+	var next = document.querySelector('.nextVideo')
+	if(video != null) {
+		video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + id[0].toLowerCase() + '.mp4'
+		episodename.innerHTML = json.episodename
+		seriesname.innerHTML = json.seriesname
+		episode.innerHTML = json.episode
+		description.innerHTML = json.description
+		next.href = id[0] == 'GravityFallsS02E01' ? 'RickAndMortyS01E07' : 'GravityFallsS02E01'
+		document.head.title = json.seriesname + ' - ' + json.episode + ' - Nowlow\'s video player'
+	}
+	
 })
