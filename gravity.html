@@ -3,13 +3,15 @@
 	<head>
 		<meta charset="utf-8"/>
 		<link rel="icon" type="image/png" href="https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/milky-way_1f30c.png"/>
-		
-		<title>Nowlow's video player</title>
+		<title>Souvenirs de Gravity Falls - E01·S02 - Nowlow's video player</title>
 		<link rel="stylesheet" href="css/videoplayer.css"/>
 		<link rel="stylesheet" href="css/main.css"/>
 		<link rel="stylesheet" href="css/fontawesome/fontawesome-all.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta property="og:title" content="Souvenirs de Gravity Falls - Nowlow's video player" />
+		<meta name="video" content="GravityFallsS02E01"/>
+		
+		<meta property="og:title" content="Souvenirs de Gravity Falls - E01·S02 - Nowlow's video player" />
+		<meta property="og:description" content="C'est un épisode d'une série géniale nommée Souvenirs de vravity falls"/>
 		<meta property="og:type" content="video" />
 		<meta property="og:url" content="https://nowlow.github.io/" />
 		<meta property="og:image" content="https://radiodisneyclub.fr/wp-content/uploads/2016/12/gravity-falls-160239.jpg" />
@@ -51,64 +53,60 @@
 				</div>
 			</div>
 		</div>
-			<div class="video">
-				<span id="startplaying"><v dun="play"></v></span>
-				<video id="video" preload="metadata">
-					<source src="http://93.4.85.60/NowlowPlayer/src/videos/gravity.mp4" type="video/mp4">
-					Souvenirs de Gravity Falls . Video Not found
-				</video>
-				<div id="vmenu" style="display: none">
-					Ben non y a rien ici tu t'attendais à quoi?
+		<div class="video">
+			<span id="startplaying"><v dun="play"></v></span>
+			<video id="video" preload="metadata" src="">
+				Souvenirs de Gravity Falls . Video Not found
+			</video>
+			<div id="vmenu" style="display: none">
+				Ben non y a rien ici tu t'attendais à quoi?
+			</div>
+			<div id="controlbar">
+				<div id="timebar">
+					<div id="progressbar"></div>
 				</div>
-				<div id="controlbar">
-					<div id="timebar">
-						<div id="progressbar"></div>
+				<div class="settings">
+					<div class="left">
+						<v dun="play"></v>
+						<v dun="pause" style="display: none"></v>
+						<span id="timer" onload="updateTimer()"></span>
 					</div>
-					<div class="settings">
-						<div class="left">
-							<v dun="play"></v>
-							<v dun="pause" style="display: none"></v>
-							<span id="timer" onload="updateTimer()"></span>
-						</div>
 
-						<div class="right">
-							<span id="non-util-settings">
-								<v dun="gear"></v>
-								<v dun="cinema"></v>
-							</span>
-							<v dun="fullscreen"></v>
-						</div>
+					<div class="right">
+						<span id="non-util-settings">
+							<v dun="gear"></v>
+							<v dun="cinema"></v>
+						</span>
+						<v dun="fullscreen"></v>
 					</div>
 				</div>
 			</div>
-			<div class="separation"></div>
-			<div class="container">
-				<section class="infos">
-				<span>
-					<span id="seriesname">Souvenirs de Gravity Falls <span class="thtRocks"><i class="fas fa-check-circle"></i><span class="thtDesc">That rocks a LOT!</span></span></span>
-					<span>
-					<span id="episode">E1·S02</span>
-					<span id="subscribe"></span>
-					</span>
-				</span>
-				<span id="episodename">La soirée karaoké</span>
-				</section>
-				<section id="description">Voici un épisode de Souvenirs de Gravity Falls téléchargé et réuploadé totalement illégallement. Putain ce que j'aime cette série. J'espère que vous serez heureux et reconnaissant du fait que j'ai pris des risques pour vous. Allez abonnez vou.. ah nan c'est pas dispo, ben suivez moi sur des réseaux sociaux tels que Twitter, twitter ou twitter: <br />
-				Twitter : <a href="https://www.twitter.com/MaitreNowlow">@MaitreNowlow</a><br/>
-				Twitter : <a href="https://www.twitter.com/MaitreNowlow">@MaitreNowlow</a><br/>
-				Twitter : <a href="https://www.twitter.com/MaitreNowlow">@MaitreNowlow</a><br/>
-				Je tiens à préciser que ce site n'as pas du tout vocation à être un "site de streaming dégeu" ni même un site de streaming en fait, c'était juste pour le défi de réaliser un lecteur de vidéos en deux jours de A à Z (lecteur en soi + police d'écriture qui permets de faire de jolies ptites icones tels que le <v class="indesc" dun="play"></v>ou le <v class="indesc" dun="gear"></v> qui ne sont rien d'autre qu'un "A" et un "I"). Bref, enjoy l'épisode c'est cadeau.
-				</section>
-				<div class="separation"></div>
-				<a href="index.html" class="nextVideo">Une autre vidéo <i class="fas fa-angle-right"></i></a>
-				<div class="separation"></div>
 		</div>
+		<div class="separation"></div>
+		<div class="container">
+			<section class="infos">
+			<span>
+				<span id="seriesname"><span class="thtRocks"><i class="fas fa-check-circle"></i><span class="thtDesc">That rocks a LOT!</span></span></span>
+				<span>
+				<span id="episode"></span>
+				<span id="subscribe"></span>
+				</span>
+			</span>
+			<span id="episodename"></span>
+			</section>
+			<section id="description"></section>
 			<div class="separation"></div>
+			<a href="index.html" class="nextVideo">Une autre vidéo <i class="fas fa-angle-right"></i></a>
+			<div class="separation"></div>
+		</div>
+		<div class="separation"></div>
 		<div class="footer">
 			<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/milky-way_1f30c.png" alt="galaxy_logo" width="30px" height="30px"/> Maitre Nowlow's video player |
 			Aucun droit réservé. 2018 Maitre Nowlow |
 			<i class="fas fa-space-shuttle"></i> Powered by Naoufel Berrada.<br/>
-			La police utilisée par le lecteur est entièrement faite par moi mais j'utilise FontAwesome pour le flat faut pas déconner <i class="fab fa-font-awesome"></i></div>
+			La police utilisée par le lecteur est entièrement faite par moi mais j'utilise FontAwesome pour le flat faut pas déconner <i class="fab fa-font-awesome"></i>
+		</div>
+		<script src="js/pagebuilder.js"></script>
 		<script src="js/vfont.js"></script>
 		<script src="js/cookies.js"></script>
 		<script src="js/app.js"></script>
