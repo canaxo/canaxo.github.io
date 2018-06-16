@@ -157,12 +157,10 @@ body.night a {
 }
 
 #linkcontainer {
-	display: flex;
-	flex-flow: row;
-	justify-content: space-between;
-	align-content: center;
-	align-items: center;
-	margin: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 15px;
+	padding: 2%;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -173,8 +171,8 @@ body.night a {
 	background-size: 100% 100%;
 	padding: 10px;
 	border-radius: 10px;
-	width: 640px;
-	height: 360px;
+	width: 96.6%;
+	overflow: hidden;
 }
 
 .linktovideo.day {
@@ -185,12 +183,11 @@ body.night a {
 	background-color: rgba(28, 42, 57, 0.7);
 }
 
-.linktovideo div {
-	margin: 10px;
+.linktovideo span {
 	padding: 10px;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.7);
 	width: auto;
-	border-radius: 2px;
+	border-radius: 0 0 5px 5px;
 	color: white;
 }
 

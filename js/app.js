@@ -1,4 +1,6 @@
 window.onload = () => {
+	resizeHeader()
+	
 	if(video != null) {
 		if(readCookie('subscribed') != null) {
 			if(readCookie('subscribed') == 'false') {
@@ -56,6 +58,8 @@ window.onload = () => {
 	menu.style.height = document.clientHeight + 'px'
 }
 
+
+var header = document.querySelector('.trueone')
 var ua = navigator.userAgent.toLowerCase()
 var container = document.querySelector('.container')
 var subscribe = document.getElementById('subscribe')
@@ -77,6 +81,10 @@ setInterval(() => {
 		sessionStorage.setItem('time of ' + document.getElementById('episodename').innerHTML, video.currentTime)
 	}
 }, 500)
+
+function resizeHeader() {
+	header.style.width = document.body.clientWidth + 'px'
+}
 
 if(video != null) {
 	subscribe.onclick = () => {
@@ -147,4 +155,8 @@ document.onclick = (e) => {
 				menu.style.width = '0'
 		}
 	}
+}
+
+window.onresize = () => {
+	resizeHeader()
 }

@@ -14,5 +14,21 @@
 		"thumbnail" : "https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/22881?region=US&size=952x536",
 		"episodename" : "Gazorpazorp junior",
 		"description" : "Voici un épisode de Souvenirs de Rick & Morty téléchargé et réuploadé totalement illégallement. Putain ce que j'aime cette série. J'espère que vous serez heureux et reconnaissant du fait que j'ai pris des risques pour vous. Allez abonnez vou.. ah nan c'est pas dispo, ben suivez moi sur des réseaux sociaux tels que Twitter, twitter ou twitter: <br \/>Twitter : <a href=\"https://www.twitter.com/MaitreNowlow\">@MaitreNowlow<\/a><br\/>Twitter : <a href=\"https://www.twitter.com/MaitreNowlow\">@MaitreNowlow<\/a><br\/>Twitter : <a href=\"https://www.twitter.com/MaitreNowlow\">@MaitreNowlow<\/a><br\/>Je tiens à préciser que ce site n'as pas du tout vocation à être un \"site de streaming dégeu\" ni même un site de streaming en fait, c'était juste pour le défi de réaliser un lecteur de vidéos en deux jours de A à Z (lecteur en soi + police d'écriture qui permets de faire de jolies ptites icones tels que le <v class=\"indesc\" dun=\"play\"><\/v>ou le <v class=\"indesc\" dun=\"gear\"><\/v> qui ne sont rien d'autre qu'un \"A\" et un \"I\"). Bref, enjoy l'épisode c'est cadeau."
+	},
+	"Videotest1" : {
+		"seriesname" : "Test de vidéo",
+		"episode" : "E42·S72",
+		"rocks" : false,
+		"thumbnail" : "https://www.worldatlas.com/r/w728-h425-c728x425/upload/44/03/55/shutterstock-73764937.jpg",
+		"episodename" : "Wow what a test",
+		"description" : "C'est un test calme toi"
+	},
+	"Videotest2" : {
+		"seriesname" : "Autre test de vidéo",
+		"episode" : "E72·S42",
+		"rocks" : true,
+		"thumbnail" : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/04/04/11/an144798111a-squirrel-sits-.jpg?width=900&height=340&fit=bounds&format=pjpg&auto=webp&quality=70&crop=16:9,offset-y0.5",
+		"episodename" : "Super",
+		"description" : "Re-calme toi"
 	}
 }
