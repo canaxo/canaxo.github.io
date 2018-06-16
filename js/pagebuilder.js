@@ -8,9 +8,9 @@ function extractUrlParams(){
 	return f
 }
 
-var id = extractUrlParams()
+var urlPar = extractUrlParams()
 
-let video_request = fetch('JSON_content/videos/' + id[0] + '.json', {
+let video_request = fetch('JSON_content/videos/' + urlPar['id'] + '.json', {
 	method: 'GET',
 }).then(function (response) {
 	return response.json()
@@ -23,7 +23,7 @@ let video_request = fetch('JSON_content/videos/' + id[0] + '.json', {
 	var next = document.querySelector('.nextVideo')
 	console.log(json)
 	if(video != null) {
-		video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + id[0].toLowerCase() + '.mp4'
+		video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + urlPar['id'].toLowerCase() + '.mp4'
 		episodename.innerHTML = json.episodename
 		seriesname.innerHTML = json.seriesname
 		episode.innerHTML = json.episode
