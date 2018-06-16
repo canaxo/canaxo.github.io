@@ -17,43 +17,37 @@ var episode = document.getElementById('episode')
 var description = document.getElementById('description')
 var next = document.querySelector('.nextVideo')
 
-let video_request = fetch('JSON_content/videos.json', {
+let video_request = fetch('JSON_content/videos/videos.json', {
 	method: 'GET',
 }).then(function (response) {
 	return response.json()
 }).then(function (json) {
 	var exists = false
-	for(var i=0; i < json.length; i++) {
-		console.log(json[i])
-		if(urlPar['id'] == json[i]) exists = true
+	var i
+	for(i = 0; i < Object.keys(json).length; i++) {
+		if(urlPar['id'] == Object.keys(json)[i]) exists = true
 	}
 	if(exists) {
-		fetch('JSON_content/videos/' + urlPar['id'] + '.json', {
-			method: 'GET',
-		}).then(function (response) {
-			return response.json()
-		}).then(function (video_json) {
-			if(video != null) {
-				video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + urlPar['id'].toLowerCase() + '.mp4'
-				episodename.innerHTML = video_json.episodename
-				seriesname.innerHTML = video_json.seriesname
-				episode.innerHTML = video_json.episode
-				description.innerHTML = video_json.description
-				var rand = Math.floor((Math.random() * json.length) + 1)
-				while(json[rand] == urlPar[id]) {
-					rand = Math.floor((Math.random() * json.length) + 1)
-				}
-				next.href = 'watch.html?id=' + json[rand]
-				document.title = json.seriesname + ' - ' + video_json.episode + ' - Nowlow\'s video player'
+		if(video != null) {
+			video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + urlPar['id'].toLowerCase() + '.mp4'
+			episodename.innerHTML = json[urlPar['id']]['episodename']
+			seriesname.innerHTML = json[urlPar['id']]['rocks'] ? json[urlPar['id']]['seriesname'] + ' <span class=\"thtRocks\"><i class=\"fas fa-check-circle\"></i><span class=\"thtDesc\">That rocks!</span></span>' : json[urlPar['id']]['seriesname']
+			episode.innerHTML = json[urlPar['id']]['episode']
+			description.innerHTML = json[urlPar['id']]['description']
+			var rand = Math.floor((Math.random() * Object.keys(json).length))
+			while(Object.keys(json)[rand] == urlPar['id']) {
+				rand = Math.floor((Math.random() * Object.keys(json).length))
 			}
-		})
-	} else {
-		episodename.innerHTML = 'Video not found'
-		seriesname.innerHTML = 'Wrong URL'
-		episode.innerHTML = 'S00E00'
-		description.innerHTML = 'Please make us a feedback '
-		next.href = 'index.html'
-		next.innerHTML = 'Go home'
-		document.title ='Video not found - Nowlow\'s video player'
+			next.href = 'watch.html?id=' + Object.keys(json)[rand]
+			document.title = json[urlPar['id']]['seriesname'] + ' - ' + json[urlPar['id']]['episode'] + ' - Nowlow\'s video player'
+		} else {
+			episodename.innerHTML = 'Video not found'
+			seriesname.innerHTML = 'Wrong URL'
+			episode.innerHTML = 'S00E00'
+			description.innerHTML = 'Please make us a feedback '
+			next.href = 'index.html'
+			next.innerHTML = 'Go home'
+			document.title ='Video not found - Nowlow\'s video player'
+		}
 	}
 })

@@ -64,7 +64,6 @@ video_c.onresize = () => {
 }
 
 document.body.onresize = () => {
-	console.log('coucou')
 	resizeVideo()
 }
 
@@ -201,7 +200,6 @@ video.ontimeupdate = function () {
 Video.playButton.addEventListener('click', player)
 
 window.onresize = () => {
-	console.log('coucou')
 	setTimeout(() => {
 	resizeVideo()
 	placePPlay()
@@ -210,7 +208,6 @@ window.onresize = () => {
 
 Video.pauseButton.addEventListener('click', pauser)
 video.addEventListener('click', () => {
-	console.log(isMobile)
 	if(!isMobile) {
 		if(!video.paused) pauser()
 		else if(video.paused) player()

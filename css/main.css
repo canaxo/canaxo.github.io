@@ -156,7 +156,7 @@ body.night a {
 	width: 100%;
 }
 
-.linkcontainer {
+#linkcontainer {
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
@@ -167,14 +167,6 @@ body.night a {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-#gravity {
-	background-image: url("https://radiodisneyclub.fr/wp-content/uploads/2016/12/gravity-falls-160239.jpg")
-}
-
-#rickandmorty {
-	background-image: url("https://ibhuluimcom-a.akamaihd.net/ib.huluim.com/show/22881?region=US&size=952x536")
 }
 
 .linktovideo {
