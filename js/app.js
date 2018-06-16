@@ -163,6 +163,7 @@ window.onresize = () => {
 
 function onScreenChange({ target: { type } }) {
 	resizeHeader()
+	close.innerHTML = 'changed'
 }
 
 window.screen.orientation.addEventListener('change', onScreenChange)
