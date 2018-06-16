@@ -199,6 +199,17 @@ body.night a {
 		margin: 0 auto;
 	}
 	
+	
+	#linkcontainer {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
+	.linktovideo {
+		margin-bottom: 15px;
+	}
+	
 	.infos {
 		flex-flow: column-reverse;
 		align-content: flex-start;
@@ -228,6 +239,10 @@ body.night a {
 		align-content: center;
 		align-items: center;
 		font-size: 15px;
+	}
+	
+	#linkcontainer {
+		grid-template-columns: 1fr;
 	}
 	
 	.header i {
