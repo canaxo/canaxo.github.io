@@ -235,43 +235,12 @@ body.night a {
 	#non-util-settings {
 		display: none;
 	}
-}
-
-@media screen and (max-device-width: 767px) and (orientation: portrait) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-		align-content: center;
-		align-items: center;
-		font-size: 15px;
-	}
-	
-	#linkcontainer {
-		grid-template-columns: 1fr;
-	}
 	
 	.header i {
-		font-size: 20px;
+		font-size: 24.9px;
 	}
 	
 	.logo i {
-		font-size: 30px;
-		opacity: 1;
-	}
-	
-	.falseone span {
-		display: none;
-	}
-	
-	#menu {
-		max-width: 100%;
-	}
-	
-	.elements {
-		height: 50%;
-	}
-	
-	.element {
-		width: 100%;
+		font-size: 50px;
 	}
 }
