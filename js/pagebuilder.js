@@ -24,6 +24,7 @@ let video_request = fetch('JSON_content/videos.json', {
 }).then(function (json) {
 	var exists = false
 	for(var i=0; i < json.length; i++) {
+		console.log(json[i])
 		if(urlPar['id'] == json[i]) exists = true
 	}
 	if(exists) {
@@ -44,6 +45,8 @@ let video_request = fetch('JSON_content/videos.json', {
 				}
 				next.href = 'watch.html?id=' + json[rand]
 				document.title = json.seriesname + ' - ' + video_json.episode + ' - Nowlow\'s video player'
+			} else {
+				urlPar = 
 			}
 		})
 	} else {
