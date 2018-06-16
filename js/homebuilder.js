@@ -22,10 +22,15 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 		}
 		newLink.appendChild(linkTitle)
 		linkcontainer.appendChild(newLink)
+		resizeHeader()
 		resizeLinksContainer()
 		resizeLinks()
 	}
 })
+
+function resizeHeader() {
+	header.style.width = document.body.clientWidth + 'px'
+}
 
 function resizeLinksContainer() {
 	linkcontainer.style.width = (document.body.clientWidth - 50) + 'px'
@@ -39,6 +44,7 @@ function resizeLinks() {
 }
 
 window.addEventListener('resize', () => {
+	resizeHeader()
 	resizeLinksContainer()
 	resizeLinks()
 })
