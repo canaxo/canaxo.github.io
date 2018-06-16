@@ -191,7 +191,7 @@ body.night a {
 	color: white;
 }
 
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
 	.container {
 		width: 91.5%;
 		padding-left: 10px;
