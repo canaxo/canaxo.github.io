@@ -52,7 +52,7 @@ let video_request = fetch('JSON_content/videos.json', {
 		seriesname.innerHTML = 'Wrong URL'
 		episode.innerHTML = 'S00E00'
 		description.innerHTML = 'Please make us a feedback '
-		next.href = urlPar['id'] == 'index.html'
+		next.href = 'index.html'
 		next.innerHTML = 'Go home'
 		document.title ='Video not found - Nowlow\'s video player'
 	}
