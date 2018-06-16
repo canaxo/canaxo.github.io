@@ -159,8 +159,8 @@ body.night a {
 #linkcontainer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 15px;
-	padding: 2%;
+	grid-gap: 30px;
+	margin: 25px;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -169,10 +169,10 @@ body.night a {
 
 .linktovideo {
 	background-size: 100% 100%;
-	padding: 10px;
 	border-radius: 10px;
 	width: 96.6%;
 	overflow: hidden;
+	padding-top: 10px;
 }
 
 .linktovideo.day {
@@ -187,11 +187,11 @@ body.night a {
 	padding: 10px;
 	background-color: rgba(0,0,0,0.7);
 	width: auto;
-	border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 0;
 	color: white;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
 	.container {
 		width: 91.5%;
 		padding-left: 10px;
@@ -208,6 +208,11 @@ body.night a {
 	
 	.linktovideo {
 		margin-bottom: 15px;
+		padding-top: 5px;
+	}
+	
+	.linktovideo span {
+		font-size: 12px;
 	}
 	
 	.infos {

@@ -22,9 +22,14 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 		}
 		newLink.appendChild(linkTitle)
 		linkcontainer.appendChild(newLink)
+		resizeLinksContainer()
 		resizeLinks()
 	}
 })
+
+function resizeLinksContainer() {
+	linkcontainer.style.width = (document.body.clientWidth - 50) + 'px'
+}
 
 function resizeLinks() {
 	var links = document.querySelectorAll('.linktovideo')
@@ -33,4 +38,7 @@ function resizeLinks() {
 		links[i].style.height = (links[i].offsetWidth * 9/16) + 'px'
 }
 
-window.addEventListener('resize', resizeLinks)
+window.addEventListener('resize', () => {
+	resizeLinksContainer()
+	resizeLinks()
+})
