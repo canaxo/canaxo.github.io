@@ -28,8 +28,8 @@ let video_request = fetch('JSON_content/videos/' + urlPar['id'] + '.json', {
 		seriesname.innerHTML = json.seriesname
 		episode.innerHTML = json.episode
 		description.innerHTML = json.description
-		next.href = urlPar['id'] == 'GravityFallsS02E01' ? 'RickAndMortyS01E07' : 'GravityFallsS02E01'
-		document.head.title = json.seriesname + ' - ' + json.episode + ' - Nowlow\'s video player'
+		next.href = urlPar['id'] == 'GravityFallsS02E01' ? 'watch.html?id=RickAndMortyS01E07' : 'watch.html?id=GravityFallsS02E01'
+		document.title = json.seriesname + ' - ' + json.episode + ' - Nowlow\'s video player'
 	}
 	
 })
