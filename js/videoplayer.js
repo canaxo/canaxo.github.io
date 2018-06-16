@@ -119,6 +119,7 @@ function enterFullscreen() {
 }
 
 function exitFullscreen() {
+	resizeHeader()
 	if (document.exitFullscreen) document.exitFullscreen()
 	else if (document.webkitExitFullscreen) document.webkitExitFullscreen()
 	else if (document.mozCancelFullScreen) document.mozCancelFullScreen()
