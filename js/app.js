@@ -83,14 +83,12 @@ subscribe.onclick = () => {
 		subscribe.innerHTML = 'subscribed'
 		createCookie('subscribed', 'true', 99999)
 		readCookie('subscribed')
-		console.log(readCookie('subscribed'))
 	} else {
 		subscribe.style.backgroundColor = 'darkred'
 		subscribe.style.color = 'white'
 		subscribe.innerHTML = 'subscribe'
 		createCookie('subscribed', 'false', 99999)
 		readCookie('subscribed')
-		console.log(readCookie('subscribed'))
 	}
 }
 

@@ -30,7 +30,7 @@ a {
 	color: #1c2a39;
 }
 
-a.night {
+body.night a {
 	color: cadetblue;
 }
 
