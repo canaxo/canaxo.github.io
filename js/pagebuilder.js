@@ -21,6 +21,7 @@ let video_request = fetch('JSON_content/videos/' + id[0] + '.json', {
 	var episode = document.getElementById('episode')
 	var description = document.getElementById('description')
 	var next = document.querySelector('.nextVideo')
+	console.log(json)
 	if(video != null) {
 		video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + id[0].toLowerCase() + '.mp4'
 		episodename.innerHTML = json.episodename
