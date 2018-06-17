@@ -39,7 +39,7 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 				rand = Math.floor((Math.random() * Object.keys(json).length))
 			}
 			next.href = 'watch.html?id=' + Object.keys(json)[rand]
-			document.title = json[urlPar['id']]['seriesname'] + ' - ' + json[urlPar['id']]['episode'] + ' - Galaxoft\'s video player'
+			document.title = json[urlPar['id']]['seriesname'] + ' - ' + json[urlPar['id']]['episode'] + ' - Canaxo\'s video player'
 		} else {
 			episodename.innerHTML = 'Video not found'
 			seriesname.innerHTML = 'Wrong URL'
@@ -47,7 +47,7 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 			description.innerHTML = 'Please make us a feedback '
 			next.href = 'index.html'
 			next.innerHTML = 'Go home'
-			document.title ='Video not found - Galaxoft\'s video player'
+			document.title ='Video not found - Canaxo\'s video player'
 		}
 	}
 })
