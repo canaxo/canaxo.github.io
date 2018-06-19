@@ -19,7 +19,6 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 			newLink.style.gridRow = switchLine
 			newLink.style.gridColumn = 1
 			switchColumn = 2
-			switchLine += 1
 		} else {
 			newLink.style.gridRow = switchLine
 			newLink.style.gridColumn = 2
