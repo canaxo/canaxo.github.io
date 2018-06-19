@@ -23,6 +23,7 @@
 
 .video {
 	margin-top: 20px;
+	background-size: 100% 100%;
 }
 
 #seriesname {
@@ -146,7 +147,7 @@ section {
 	padding-top: 2px;
 	padding-bottom: 2px;
     border-radius: 3px;
-	margin-top: 40px;
+	margin-top: 35px;
 	
     position: absolute;
     z-index: 1;

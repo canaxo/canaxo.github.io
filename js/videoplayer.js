@@ -31,6 +31,7 @@ updateTimer()
 resizeVideo()
 
 function player () {
+	video.style.opacity = 1
 	video.play()
 	Video.playButton.style.display = 'none'
 	Video.pauseButton.style.display = 'block'
