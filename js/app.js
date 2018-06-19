@@ -68,8 +68,10 @@ var menu = document.getElementById('menu')
 var menudisplayer = document.getElementById('menudisplayer')
 var day = document.getElementById('day')
 var night = document.getElementById('night')
-var close = document.getElementById('close')
 var els = document.body.querySelectorAll('*')
+var block = document.getElementById('block_c')
+var all = document.getElementById('all_c')
+var mask = document.getElementById('mask')
 
 var isMobile = false
 var isPortrait
@@ -104,19 +106,39 @@ if(video != null) {
 	}
 }
 
-menudisplayer.onclick = () => {
-	setTimeout(() => {
+function toggleMenu() {
+	if(menu.style.visibility == 'visible') {
+		setTimeout(() => {
+			menu.style.width = '0'
+			menu.style.visibility = 'hidden'
+			menu.style.marginLeft = '0'
+			menu.style.padding = '0'
+		}, 200)
+		block.style.marginLeft = '0'
+		mask.style.width = '0'
+		mask.style.height = '0'
+		document.body.style.overflow = 'auto'
+		document.body.style.overflowX = 'hidden'
+	} else {
 		menu.style.visibility = 'visible'
 		menu.style.width = '100%'
-	}, 50)
+		menu.style.padding = '10px'
+		all.style.marginLeft = (menu.offsetWidth - 20) + 'px'
+		setTimeout(() => {
+			block.style.marginLeft = menu.clientWidth + 'px'
+		}, 200)
+		mask.style.width = '100%'
+		mask.style.height = '100%'
+		document.body.style.overflow = 'hidden'
+	}
 }
 
-close.onclick = () => {
-	setTimeout(() => {
-		menu.style.width = '-10px'
-			menu.style.visibility = 'hidden'
-			menu.style.width = '0'
-	}, 50)
+menudisplayer.onclick = () => {
+	toggleMenu()
+}
+
+mask.onclick = () => {
+	toggleMenu()
 }
 
 day.onclick = () => {
@@ -140,20 +162,6 @@ night.onclick = () => {
 	for (var i = 0; i < els.length; i++) {
 		els[i].classList.add('night')
 		els[i].classList.remove('day')
-	}
-}
-
-document.onclick = (e) => {
-	if(menu.style.visibility != 'hidden') {
-		var menuposXs = menu.offsetLeft
-		var menuposXe = menuposXs + menu.offsetWidth
-		var menuposYs = menu.offsetTop
-		var menuposYe = menuposYs + menu.offsetHeight
-		if(!(menuposXs <= e.clientX && e.clientX <= menuposXe) || !(menuposYs <= e.clientY && e.clientY <= menuposYe)) {
-			menu.style.width = '-10px'
-				menu.style.visibility = 'hidden'
-				menu.style.width = '0'
-		}
 	}
 }
 

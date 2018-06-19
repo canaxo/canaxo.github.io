@@ -1,6 +1,7 @@
 var linkcontainer = document.getElementById('linkcontainer')
 var switchLine = 1
 var switchColumn = 1
+var columns = 3
 
 let video_request = fetch('JSON_content/videos/videos.json', {
 	method: 'GET',
@@ -15,13 +16,13 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 		newLink.href = 'watch.html?id=' + Object.keys(json)[i]
 		newLink.style.backgroundImage = 'url(' + json[Object.keys(json)[i]]['thumbnail'] + ')'
 		newLink.classList.add('linktovideo')
-		if(switchColumn == 1) {
+		if(switchColumn < columns) {
 			newLink.style.gridRow = switchLine
-			newLink.style.gridColumn = 1
-			switchColumn = 2
+			newLink.style.gridColumn = switchColumn
+			switchColumn += 1
 		} else {
 			newLink.style.gridRow = switchLine
-			newLink.style.gridColumn = 2
+			newLink.style.gridColumn = switchColumn
 			switchColumn = 1
 			switchLine += 1
 		}
