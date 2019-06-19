@@ -41,7 +41,7 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 			}
 			next.href = 'watch.html?id=' + Object.keys(json)[rand]
 			document.title = json[urlPar['id']]['seriesname'] + ' - ' + json[urlPar['id']]['episode'] + ' - Canaxo\'s video player'
-			video_c.style.backgroundImage = 'url(' + json[urlPar['id']]['thumbnail'] + ')'
+			//video_c.style.backgroundImage = 'url(' + json[urlPar['id']]['thumbnail'] + ')'
 			video.style.opacity = 0
 		} else {
 			episodename.innerHTML = 'Video not found'
