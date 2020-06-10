@@ -30,7 +30,8 @@ let video_request = fetch('JSON_content/videos/videos.json', {
 	}
 	if(exists) {
 		if(video != null) {
-			video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + urlPar['id'].toLowerCase() + '.mp4'
+			//video.src = 'http://93.4.85.60/NowlowPlayer/src/videos/' + urlPar['id'].toLowerCase() + '.mp4'
+			video.src = 'https://polflix.media/Video/Serie/Adventure%20Time/Saison%201/1X01%20-%20Une%20soir%C3%A9e%20mortelle.mp4'
 			episodename.innerHTML = json[urlPar['id']]['episodename']
 			seriesname.innerHTML = json[urlPar['id']]['rocks'] ? json[urlPar['id']]['seriesname'] + ' <span class=\"thtRocks\"><i class=\"fas fa-check-circle\"></i><span class=\"thtDesc\">That rocks!</span></span>' : json[urlPar['id']]['seriesname']
 			episode.innerHTML = json[urlPar['id']]['episode']
